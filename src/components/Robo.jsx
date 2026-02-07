@@ -86,3 +86,4 @@ export function Robo(props) {
 }
 
 useGLTF.preload("models/Untitled.glb");
+
