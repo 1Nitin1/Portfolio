@@ -5,13 +5,13 @@ import {
   Sky,
 } from "@react-three/drei";
 import { useControls } from "leva";
-import { Avatar } from "./Avatar";
+import { Robo } from "./Robo";
 
 export const Experience = () => {
   const { animation } = useControls({
     animation: {
       value: "Typing",
-      options: ["Typing", "Falling", "Standing"],
+      options: ["Typing", "Falling", "Jumping Down", "Defeated"],
     },
   });
   return (
@@ -28,7 +28,7 @@ export const Experience = () => {
           resolution={256}
           color="#000000"
         />
-        <Avatar animation={animation} />
+        <Robo animation={animation} />
         {animation === "Typing" && (
           <mesh scale={[0.8, 0.5, 0.8]} position-y={0.25}>
             <boxGeometry />
